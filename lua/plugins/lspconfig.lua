@@ -68,6 +68,8 @@ return {
       end,
     })
 
+    require('lspconfig').gleam.setup {}
+
     local configs = {
       lua_ls = {
         settings = {
