@@ -19,6 +19,8 @@ vim.opt.cursorline = false
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.opt.signcolumn = 'yes'
+
 vim.opt.showmode = true
 
 vim.opt.scrolloff = 12

@@ -4,7 +4,6 @@ return {
   lazy = false,
   priority = 1000,
   config = function()
-    ---[[
     local flavor = 'mocha'
 
     require('catppuccin').setup {
@@ -19,6 +18,5 @@ return {
     vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = colors.pink })
     vim.api.nvim_set_hl(0, 'LineNr', { fg = colors.pink })
     vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = colors.surface2 })
-    --]]
   end,
 }
