@@ -68,7 +68,9 @@ return {
       end,
     })
 
-    require('lspconfig').gleam.setup {}
+    local lspconfig = require 'lspconfig'
+
+    lspconfig.gleam.setup {}
 
     local configs = {
       lua_ls = {
@@ -92,15 +94,15 @@ return {
 
     require('mason-lspconfig').setup {
       ensure_installed = {
-        "lua_ls",
-        "rust_analyzer",
-        "clangd",
+        'lua_ls',
+        'rust_analyzer',
+        'clangd',
       },
       handlers = {
         -- this first function is the "default handler"
         -- it applies to every language server without a "custom handler"
         function(server_name)
-          require('lspconfig')[server_name].setup(configs[server_name] or {})
+          lspconfig[server_name].setup(configs[server_name] or {})
         end,
       },
     }

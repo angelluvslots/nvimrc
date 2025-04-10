@@ -7,7 +7,6 @@ vim.keymap.set('i', 'kk', '<Esc>l')
 vim.keymap.set('n', '<leader>x', vim.cmd.Ex)
 
 vim.keymap.set('n', '<leader>/', '<Cmd>noh<CR>')
-
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
@@ -25,7 +24,8 @@ vim.opt.showmode = true
 
 vim.opt.scrolloff = 12
 
-vim.opt.clipboard = 'unnamed'
+-- vim.opt.clipboard = 'unnamed'
+vim.opt.clipboard = 'unnamedplus'
 
 vim.opt.undofile = true
 
