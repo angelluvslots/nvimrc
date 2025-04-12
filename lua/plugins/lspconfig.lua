@@ -96,7 +96,7 @@ return {
       ensure_installed = {
         'lua_ls',
         'rust_analyzer',
-        'clangd',
+        -- 'clangd',
       },
       handlers = {
         -- this first function is the "default handler"
