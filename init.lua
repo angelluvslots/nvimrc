@@ -11,6 +11,9 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
+vim.keymap.set('n', '<leader>qq', '<Cmd>q<CR>')
+vim.keymap.set('n', '<leader>qw', '<Cmd>wq<CR>')
+
 vim.opt.list = true
 vim.opt.listchars = { tab = '⟶ ', trail = '•', nbsp = '␣' }
 

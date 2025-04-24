@@ -70,7 +70,30 @@ return {
 
     local lspconfig = require 'lspconfig'
 
+    local border = {
+      { '╭', 'FloatBorder' },
+      { '─', 'FloatBorder' },
+      { '╮', 'FloatBorder' },
+      { '│', 'FloatBorder' },
+      { '╯', 'FloatBorder' },
+      { '─', 'FloatBorder' },
+      { '╰', 'FloatBorder' },
+      { '│', 'FloatBorder' },
+    }
+
     lspconfig.gleam.setup {}
+
+    -- LSP settings (for overriding per client)
+    local handlers = {
+      ['textDocument/hover'] = vim.lsp.with(
+        vim.lsp.handlers.hover,
+        { border = border }
+      ),
+      ['textDocument/signatureHelp'] = vim.lsp.with(
+        vim.lsp.handlers.signature_help,
+        { border = border }
+      ),
+    }
 
     local configs = {
       lua_ls = {
@@ -89,6 +112,7 @@ return {
             },
           },
         },
+        handlers = handlers,
       },
     }
 
@@ -102,7 +126,9 @@ return {
         -- this first function is the "default handler"
         -- it applies to every language server without a "custom handler"
         function(server_name)
-          lspconfig[server_name].setup(configs[server_name] or {})
+          lspconfig[server_name].setup(configs[server_name] or {
+            handlers = handlers,
+          })
         end,
       },
     }
