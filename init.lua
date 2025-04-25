@@ -25,7 +25,7 @@ vim.opt.signcolumn = 'yes'
 
 vim.opt.showmode = true
 
-vim.opt.scrolloff = 12
+vim.opt.scrolloff = 100
 
 -- vim.opt.clipboard = 'unnamed'
 vim.opt.clipboard = 'unnamedplus'
