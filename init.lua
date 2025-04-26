@@ -6,6 +6,8 @@ vim.keymap.set('i', 'kk', '<Esc>l')
 
 vim.keymap.set('n', '<leader>x', vim.cmd.Ex)
 
+vim.keymap.set('n', '<leader>;', '$a;<Esc>')
+
 vim.keymap.set('n', '<leader>/', '<Cmd>noh<CR>')
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 2
