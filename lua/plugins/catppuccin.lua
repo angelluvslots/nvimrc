@@ -16,7 +16,7 @@ return {
     local colors = require('catppuccin.palettes').get_palette(flavor)
     vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = colors.subtext0 })
     vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = colors.subtext0 })
-    vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = colors.text, bold = true })
-    vim.api.nvim_set_hl(0, 'LineNr', { fg = colors.text, bold = true })
+    vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = colors.rosewater })
+    vim.api.nvim_set_hl(0, 'LineNr', { fg = colors.rosewater })
   end,
 }
