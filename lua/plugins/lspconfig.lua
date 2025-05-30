@@ -4,8 +4,8 @@ return {
   event = { 'BufReadPre', 'BufNewFile' },
   dependencies = {
     { 'hrsh7th/cmp-nvim-lsp' },
-    { 'williamboman/mason.nvim' },
-    { 'williamboman/mason-lspconfig.nvim' },
+    { 'mason-org/mason.nvim' },
+    { 'mason-org/mason-lspconfig.nvim' },
   },
   config = function()
     local lsp_defaults = require('lspconfig').util.default_config
