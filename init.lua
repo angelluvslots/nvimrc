@@ -7,16 +7,38 @@ vim.keymap.set('i', 'kk', '<Esc>l')
 vim.keymap.set('n', '<leader>x', vim.cmd.Ex)
 
 vim.keymap.set('n', '<leader>;', '$a;<Esc>')
+vim.keymap.set('n', '<leader>\\', '$a \\<Esc>')
 
 vim.keymap.set('n', '<leader>/', '<Cmd>noh<CR>')
+
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.keymap.set({ 'n', 'v' }, 'D', '"_d')
+vim.keymap.set({ 'n', 'v' }, 'C', '"_c')
+
+-- tj line wrapping
+vim.opt.wrap = true
+vim.opt.breakindent = true
+vim.opt.showbreak = '↴  ' -- Make it so that long lines wrap smartly
+vim.opt.linebreak = true
+vim.keymap.set(
+  'n',
+  'k',
+  "v:count == 0 ? 'gk' : 'k'",
+  { expr = true, silent = true }
+)
+vim.keymap.set(
+  'n',
+  'j',
+  "v:count == 0 ? 'gj' : 'j'",
+  { expr = true, silent = true }
+)
 
 vim.keymap.set('n', '<leader>qq', '<Cmd>q<CR>')
 vim.keymap.set('n', '<leader>qw', '<Cmd>wq<CR>')
+vim.keymap.set('n', '<leader>w', '<Cmd>w<CR>')
 
 vim.opt.list = true
 vim.opt.listchars = { tab = '⟶ ', trail = '•', nbsp = '␣' }
